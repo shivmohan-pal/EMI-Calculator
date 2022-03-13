@@ -1,0 +1,195 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emi - Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class='emi-calc'>
+        <div class="heading"><span>EMI Calculator</span></div>
+        <div class='inputs'>
+            <div class='input-box'>
+                <label for='amount'>Loan Amount</label>
+                <div class='input'>
+                    <input class='amount-input' name="amount" type='text'>
+                    <span class='sign rs'>&#8377;</span>
+                </div>
+                <div class="slideBox">
+                    <input class='amount-slider' type="range" min="0" max="20000000" step="100000" name='amount'>
+                    <div class="markers">
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">0</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">25L</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">50L</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">75L</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">100L</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">125L</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">150L</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">175L</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">200L</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class='input-box'>
+                <label for='interest'>Interest Rate</label>
+                <div class='input'>
+                    <input class='interest-input' name="interest" type='text'>
+                    <span class='sign percent'>%</span>
+                </div>
+                <div class="slideBox">
+                    <input class='interest-slider' type="range" min="5" max="20" step="0.25" name='interest'>
+                    <div class="markers">
+                        <span class="tick" style="">
+                           |
+                            <br>
+                            <span class="mark">5</span>
+                        </span>
+                        <span class="tick" style="">
+                            |
+                            <br>
+                            <span class="mark">7.5</span>
+                        </span>
+                        <span class="tick" style="">
+                            |
+                            <br>
+                            <span class="mark">10</span>
+                        </span>
+                        <span class="tick" style="">
+                            |
+                            <br>
+                            <span class="mark">12.5</span>
+                        </span>
+                        <span class="tick" style="">
+                            |
+                            <br>
+                            <span class="mark">15</span>
+                        </span>
+                        <span class="tick" style="">
+                            |
+                            <br>
+                            <span class="mark">17.5</span>
+                        </span>
+                        <span class="tick" style="">
+                            |
+                            <br>
+                            <span class="mark">20</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class='input-box'>
+                <label for='tenure'>Loan Tenure</label>
+                <div class='input'>
+                    <input class='tenure-input' name="tenure" type='text'>
+                    <span class='sign percent'></span>
+                </div>
+                <div class="slideBox">
+                    <input class='tenure-slider' type="range" min="0" max="30" step="0.5" name='tenure'>
+                    <div class="markers">
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">1</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">5</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">10</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">15</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">20</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">25</span>
+                        </span>
+                        <span class="tick">
+                            |
+                            <br>
+                            <span class="mark">30</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class='result'>
+            <div class="emi">
+                <h4>Total EMI</h4>
+                <p class="result-amount">
+                    &#8377;&nbsp<span class="emi-amount">0</span>
+                </p>
+            </div>
+            <hr>
+            <div class="interest">
+                <h4>Total Interest</h4>
+                <p class="result-amount">
+                    &#8377;&nbsp<span class="interest-amount">0</span>
+                </p>
+            </div>
+            <hr>
+            <div class="payment">
+                <h4>Total Payments</h4>
+                <p class="result-amount">
+                    &#8377;&nbsp<span class="total-amount">0</span>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+<footer>
+    <script src="index.js"></script>
+</footer>
+
+</html>
