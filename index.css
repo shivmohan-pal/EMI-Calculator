@@ -3,7 +3,8 @@
     --emiSecColor:#ccc;
     --borderColor:#f60;
     --emiBlack:black;
-    --emiGray:#ddd;
+    --emiGray:#dddddd;
+    --tickGray:#999494;
 }
 *{
     margin:0;
@@ -148,7 +149,7 @@ input:focus{
     position:relative;
     display: inline-block;
     text-align: center;
-    color:var(--emiSecColor);
+    color:var(--tickGray);
     font-size: 0.7rem;
     width: 12px;
 }
