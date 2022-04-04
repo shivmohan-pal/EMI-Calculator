@@ -1,20 +1,43 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins|Roboto');
+/* old root
 :root{
-    --emiPriColor:#8cc543;
-    --emiSecColor:#ccc;
-    --borderColor:#f60;
-    --emiBlack:black;
-    --emiGray:#dddddd;
-    --tickGray:#999494;
+--emiPriColor:#8cc543;
+--emiSecColor:#ccc;
+--emi-inputBorderShadow:#f60;
+--emiBlack:black;
+--emiGray:#dddddd;
+--tickGray:#999494;
+--emiTextColor:black;
 }
-*{
-    margin:0;
-    padding:0;
+ */
+
+/* new root changes in color 
+border-color: #4328B7;
+    background-color: rgba(60,60,200,0.2);
+    color:white;
+*/
+
+:root{
+    --emiPriColor:white;
+    --emiSecColor:rgb(60, 60, 200,0.4);;
+    --emi-inputBorderShadow:rgb(60, 60, 200,0.4);
+    --emiBlack:rgba(0,6,53,0.92);;
+    --emiGray:rgb(60, 60, 200,0.4);
+    --tickGray:black;
+    --emiTextColor:black;
 }
+.emi-calc *{
+   margin:0;
+   padding:0;
+   font-family: Poppins;
+}
+
 .emi-calc{
     font-family:sans-serif;
     border:2px solid var(--emiBlack);
-    width:80%;
+    width:85%;
     margin:auto;
+    box-shadow:0px 2px 60px 0px var(--emi-inputBorderShadow);
 }
 .heading {
     position: relative;
@@ -34,7 +57,11 @@
     bottom:-19px;
     left: calc(50% - 15px);
 }
-
+.emi-calc-box {
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+}
 
 
 
@@ -73,13 +100,13 @@ label {
     right:0;
     display:inline-block;
     width:fit-content;
-    border:1px solid var(--emiPriColor);
+    border:1px solid var(--emiBlack);
     padding:0 1rem;
     margin:auto 0 auto auto;
   }
 .input:hover{
-    box-shadow: 0 0 5px var(--borderColor);
-    border: 1px solid var(--borderColor);
+    box-shadow: 0 0 5px var(--emi-inputBorderShadow);
+    border: 1px solid var(--emi-inputBorderShadow);
 }  
 .amount-input {
    /* position:relative; */
@@ -91,6 +118,7 @@ label {
 }
 .rs {
     left:5%;
+    font-family: Roboto;
 }
 .percent {
    right:15%;
@@ -107,10 +135,11 @@ input[type='range'] {
     width: 100%;
     height: 0.5rem;
     -webkit-appearance: none;
-    background: var(--emiSecColor);
+    background: var(--emiPriColor);
     outline: none;
     border-radius: 1rem;
     overflow: hidden;
+    box-shadow:0 0 1px 1px var(--emiBlack);
     z-index: -1;
   }
   input[type='range']::-webkit-slider-thumb {
@@ -120,8 +149,8 @@ input[type='range'] {
     border-radius: 50%;
     background: var(--emiBlack);
     cursor: pointer;
-    border: 1px solid var(--emiBlack);
-    box-shadow: -10000px 0 0 10000px var(--emiPriColor);
+    /* border: 1px solid var(--emiBlack); */
+    box-shadow: -10000px 0 0 10000px var(--emiSecColor);
   }
   
    /* for chrome safari edge opera */
@@ -168,6 +197,7 @@ position: relative;
       padding:0.5rem;
       min-width: 270px;
       margin:0.5rem;
+      vertical-align: middle;
   }
 .result div {
       margin:0.6rem;
@@ -175,6 +205,16 @@ position: relative;
 .result div h4{
       margin:0.6rem;
   }
+.result p {
+     font-family: Roboto;
+}
 hr {
       background: linear-gradient(0.25turn, transparent, var(--emiBlack), transparent);
     }
+
+@media only screen and (max-width: 1100px) {
+ .emi-calc-box {
+     display: block;
+ }
+ 
+}
